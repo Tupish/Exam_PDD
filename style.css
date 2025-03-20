@@ -1,8 +1,9 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    text-wrap: balance;
 }
-header{
+header,footer{
     background-color: cornflowerblue;
     height: 100%;
     margin-bottom: 20px;
@@ -12,14 +13,39 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.8;
 }
-.container {
-    height: 80%;
-    margin: 10px;
-    padding: 40px;
+main     {
+    height: 60%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 40px
+
+}
+.problem{
+    margin-top: 30px;
 }
 h1,h2 {
     color: cornflowerblue;
 }
 header>h1{
     color: white;
+}
+footer>h1{
+    color: white;
+}
+.start-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: cornflowerblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.start-button:hover {
+    background: #004080;
+}
+hr{
+    margin-top: 20px;
+    width: 90%;
+   margin-left: 5%;
 }
