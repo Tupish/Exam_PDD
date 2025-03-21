@@ -5,20 +5,21 @@
 }
 header,footer{
     background-color: cornflowerblue;
-    height: 100%;
-    margin-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 1950px;
 }
-body {
+body{
     font-family: Arial, sans-serif;
     line-height: 1.8;
 }
-main     {
+main{
+    max-width: 1200px;
+    padding: 0 20px;
     height: 60%;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 40px
-
 }
 .problem{
     margin-top: 30px;
@@ -32,6 +33,12 @@ header>h1{
 footer>h1{
     color: white;
 }
+footer{
+    margin-top: 20px;
+}
+p>a{
+    color: black;
+}
 .start-button {
     display: inline-block;
     padding: 10px 20px;
@@ -44,8 +51,23 @@ footer>h1{
 .start-button:hover {
     background: #004080;
 }
-hr{
+#main-button{
+    margin-top: 15px;
+}
+#head-button{
+    margin-bottom: 10px;
+}
+.main-images{
+    max-width: 700px;
+    width: 60%;
     margin-top: 20px;
-    width: 90%;
-   margin-left: 5%;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+
 }
