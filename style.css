@@ -4,7 +4,7 @@
     text-wrap: balance;
 }
 header,footer{
-    background-color: cornflowerblue;
+    background-color: #219fda;
     padding: 20px;
     text-align: center;
     max-width: 1950px;
@@ -21,6 +21,11 @@ main{
     margin-left: 20px;
     margin-right: 40px
 }
+.logo{
+    width: 100px;
+
+}
+
 .problem{
     margin-top: 30px;
 }
