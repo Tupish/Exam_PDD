@@ -1,10 +1,13 @@
+:root{
+    --main-color: #219fda;
+}
 *{
     margin: 0;
     box-sizing: border-box;
     text-wrap: balance;
 }
 header,footer{
-    background-color: #219fda;
+    background-color: var(--main-color);
     padding: 20px;
     text-align: center;
     max-width: 1950px;
@@ -23,14 +26,12 @@ main{
 }
 .logo{
     width: 100px;
-
 }
-
 .problem{
     margin-top: 30px;
 }
 h1,h2 {
-    color: cornflowerblue;
+    color: var(--main-color);
 }
 header>h1{
     color: white;
@@ -44,16 +45,17 @@ footer{
 p>a{
     color: black;
 }
-.start-button {
-    display: inline-block;
+.start-button{
     padding: 10px 20px;
-    background: cornflowerblue;
-    color: white;
-    text-decoration: none;
+    background: var(--main-color);
     border-radius: 10px;
     border: 1px solid white;
 }
-.start-button:hover {
+.start-button>a{
+    color: white;
+    text-decoration: none ;
+}
+.start-button:hover{
     background: #004080;
 }
 #main-button{
