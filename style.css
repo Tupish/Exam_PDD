@@ -1,5 +1,5 @@
 :root{
-    --main-color: #219fda;
+    --main-color-blue: #219fda;
 }
 *{
     margin: 0;
@@ -7,7 +7,7 @@
     text-wrap: balance;
 }
 header,footer{
-    background-color: var(--main-color);
+    background-color: var(--main-color-blue);
     padding: 20px;
     text-align: center;
     max-width: 1950px;
@@ -31,7 +31,7 @@ main{
     margin-top: 30px;
 }
 h1,h2 {
-    color: var(--main-color);
+    color: var(--main-color-blue);
 }
 header>h1{
     color: white;
@@ -47,7 +47,7 @@ p>a{
 }
 .start-button{
     padding: 10px 20px;
-    background: var(--main-color);
+    background: var(--main-color-blue);
     border-radius: 10px;
     border: 1px solid white;
 }
