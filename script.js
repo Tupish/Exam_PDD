@@ -12,9 +12,11 @@ function UpdateTimer(){
         time--;
     }
 }
-let questionIndex = 1;
+let questionIndex = 0;
 const questions = document.querySelectorAll('.question');
+const progressNumbers = document.querySelectorAll('.number');
 questions[questionIndex].classList.add('active');
+progressNumbers[questionIndex].classList.add('active');
 
 document.querySelectorAll('.question button').forEach(button =>{
     button.addEventListener('click', () =>{
@@ -26,10 +28,11 @@ document.querySelectorAll('.question button').forEach(button =>{
             alert('неправильно')
         }
         questions[questionIndex].classList.remove('active');
-
+        progressNumbers[questionIndex].classList.remove('active');
         questionIndex++;
         if (questionIndex<questions.length){
             questions[questionIndex].classList.add('active');
+            progressNumbers[questionIndex].classList.add('active');
         }else{
             alert('вы прошли тест');
         }

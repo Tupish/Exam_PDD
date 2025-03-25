@@ -1,6 +1,7 @@
 :root{
     --main-color-grey: #ececec;
-    --second-color-grey: #e4e4e4
+    --second-color-grey: #e4e4e4;
+    --main-color-blue: #219fda;
 }
 *{
     margin: 0;
@@ -34,6 +35,10 @@ body{
     font-size: 12px;
     color: #707070;
     padding: 2px;
+}
+.number.active{
+    background-color: var(--main-color-blue);
+    color: white;
 }
 header {
     width: 100%;
