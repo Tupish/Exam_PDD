@@ -16,7 +16,7 @@ body{
 }
 .exam{
     background-color: white;
-    max-width: 700px;
+    width: 700px;
     text-align: center;
     box-shadow:2px 2px 4px var();
 }
@@ -33,9 +33,15 @@ body{
     width: 22px;
     height: 20px;
     margin-left: 10px;
+    margin-top: 10px;
     font-size: 12px;
     color: #707070;
     padding: 2px;
+}
+.back-icon{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
 }
 .number.active{
     background-color: var(--second-color-blue);
@@ -45,6 +51,37 @@ body{
     background-color: var(--main-color-blue);
     color: white;
 }
+#passExam,#failExam{
+    max-width: 700px;
+    width: 100%;
+    height: 350px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: fixed;
+    font-weight: bold;
+    z-index: 1000;
+}
+#passExam.active{
+    display: flex;
+    background-color: #008000;
+}
+#failExam.active{
+    display: flex;
+    background-color: #ff0000;
+}
+.restart {
+    display: block;
+    padding: 5px;
+    font-size: 19px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color-blue);
+}
+.restart:hover {
+    background-color: var(--second-color-blue);
+}
 header {
     width: 100%;
     height: 60px;
@@ -52,7 +89,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 300px;
+    padding-left: 30px;
     padding-right: 20px;
 }
 header>h2{

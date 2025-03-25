@@ -8,9 +8,11 @@
     <title>Экзамен</title>
 </head>
 <link rel="stylesheet" href="style2.css">
+<link rel="icon" href="images/icon.ico">
 <body>
 <div class="exam">
     <header>
+        <a href="index.html"><img src="images/back_icon.svg" alt="back icon"  class="back-icon"></a>
         <h2>Экзамен</h2>
         <div id="timer">20:00</div>
     </header>
@@ -38,6 +40,21 @@
             <div class="number">19</div>
             <div class="number">20</div>
         </div>
+
+        <div id="passExam">
+            <div class="result-container">
+                <div class="result-text">ЭКЗАМЕН СДАН</div>
+                <button class="restart">Пройти заново</button>
+            </div>
+        </div>
+        <div id="failExam">
+            <div class="result-container">
+                <div class="result-text">ЭКЗАМЕН НЕСДАН</div>
+                <button class="restart">Пройти заново</button>
+            </div>
+        </div>
+
+
     <div class="questions-container">
         <div class="question">
             <img src="images/ticket_1.png" alt="question">
@@ -143,7 +160,7 @@
         <div class="question">
             <img src="images/ticket_16.png" alt="question">
             <div class="text">Этот знак:</div>
-            <button> data-correct="false"<b>1.</b> Запрещает Вам проезд через мост.</button>
+            <button data-correct="false"> <b>1.</b> Запрещает Вам проезд через мост.</button>
             <button data-correct="true"><b>2.</b> Обязывает Вас уступить дорогу встречному транспортному средству.+</button>
             <button data-correct="false"><b>3.</b> Предупреждает Вас о наличии узкого участка дороги, но не устанавливает очередность движения.</button>
         </div>
