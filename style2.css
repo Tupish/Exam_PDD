@@ -2,6 +2,7 @@
     --main-color-grey: #ececec;
     --second-color-grey: #e4e4e4;
     --main-color-blue: #219fda;
+    --second-color-blue: #4d6bfe;
 }
 *{
     margin: 0;
@@ -37,6 +38,10 @@ body{
     padding: 2px;
 }
 .number.active{
+    background-color: var(--second-color-blue);
+    color: white;
+}
+.number.completed{
     background-color: var(--main-color-blue);
     color: white;
 }
