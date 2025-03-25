@@ -83,6 +83,9 @@ button{
 button:hover{
     background-color: #d6d6d6;
 }
-.question{
-
+.question {
+    display: none;
+}
+.question.active {
+    display: block;
 }

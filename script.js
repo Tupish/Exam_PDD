@@ -12,3 +12,8 @@ function UpdateTimer(){
         time--;
     }
 }
+let questionIndex = 1;
+const questions = document.querySelectorAll('.question');
+
+
+questions[questionIndex].classList.add('active');
