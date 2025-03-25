@@ -14,8 +14,6 @@ function UpdateTimer(){
 }
 let questionIndex = 1;
 const questions = document.querySelectorAll('.question');
-const progressNumbers = document.querySelectorAll('.number');
-
 questions[questionIndex].classList.add('active');
 
 document.querySelectorAll('.question button').forEach(button =>{
@@ -26,6 +24,14 @@ document.querySelectorAll('.question button').forEach(button =>{
             alert('правильно')
         }else {
             alert('неправильно')
+        }
+        questions[questionIndex].classList.remove('active');
+
+        questionIndex++;
+        if (questionIndex<questions.length){
+            questions[questionIndex].classList.add('active');
+        }else{
+            alert('вы прошли тест');
         }
     })
 })
