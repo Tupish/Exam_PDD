@@ -38,6 +38,17 @@ body{
     color: #707070;
     padding: 2px;
 }
+.extra-number{
+    background-color: yellow;
+    max-width: 25px;
+    width: 22px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #707070;
+    padding: 2px;
+ }
 .back-icon{
     width: 30px;
     height: 30px;
@@ -48,6 +59,22 @@ body{
     color: white;
 }
 .number.completed{
+    background-color: var(--main-color-blue);
+    color: white;
+}
+.extra-numbers-container {
+    display: none;
+}
+.show-extra-questions .extra-numbers-container {
+    display: inline-flex;
+}
+
+.number.extra-number.active {
+    background-color: var(--second-color-blue);
+    color: white;
+}
+
+.number.extra-number.completed {
     background-color: var(--main-color-blue);
     color: white;
 }
@@ -130,9 +157,15 @@ button{
 button:hover{
     background-color: #d6d6d6;
 }
-.question {
+.question{
     display: none;
 }
-.question.active {
+.question.active{
+    display: block;
+}
+.extra-question{
+    display: none;
+}
+.extra-question.active{
     display: block;
 }
