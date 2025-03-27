@@ -3,9 +3,10 @@ let time = 1200;
 const Timer = document.getElementById('timer');
 let timer = setInterval(UpdateTimer, 1000);
 
-function UpdateTimer() {
+function UpdateTimer(){
     const minutes = Math.floor(time/60);
     let seconds = time%60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
     Timer.textContent = `${minutes}:${seconds}`;
     if(time === 0){
         clearInterval(timer);
@@ -13,6 +14,15 @@ function UpdateTimer() {
     }else{
         time--;
     }
+}
+
+<!--Функция перемешивания массива-->
+function mixArray(array){
+    for (let i = array.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 <!--Основные функции теста-->
@@ -23,6 +33,17 @@ let extraQuestionsShown = 0;
 let maxExtraQuestions = 0;
 let inExtraQuestions = false;
 
+
+const allQuestions = Array.from(document.querySelectorAll('.question'));
+const allExtraQuestions = Array.from(document.querySelectorAll('.extra-question'));
+
+mixArray(allQuestions);
+mixArray(allExtraQuestions);
+
+const questionsContainer = document.querySelector('.questions-container');
+allQuestions.forEach(q => questionsContainer.appendChild(q));
+allExtraQuestions.forEach(q => questionsContainer.appendChild(q));
+
 const extraQuestions = document.querySelectorAll('.extra-question');
 const questions = document.querySelectorAll('.question');
 const progressNumbers = document.querySelectorAll('.progress-bar > .number:not(.extra-number)');
@@ -31,8 +52,11 @@ const extraNumbers = document.querySelectorAll('.extra-number');
 const passExam = document.getElementById('passExam');
 const failExam = document.getElementById('failExam');
 
-questions[questionIndex].classList.add('active');
-progressNumbers[questionIndex].classList.add('active');
+questions.forEach((q, index) => {
+    q.classList.remove('active');
+    if(index === 0) q.classList.add('active');
+});
+progressNumbers[0].classList.add('active');
 
 <!--Окончание экзамена: сдан или не сдан-->
 function finishExam(passed) {
@@ -137,6 +161,15 @@ document.querySelectorAll('.question button, .extra-question button').forEach(bu
 <!--Рестарт теста-->
 function restartTest(){
     time = 1200;
+    Timer.textContent = '20:00';
+
+    // Перемешиваем вопросы заново
+    mixArray(allQuestions);
+    mixArray(allExtraQuestions);
+
+    // Добавляем перемешанные вопросы обратно в DOM
+    allQuestions.forEach(q => questionsContainer.appendChild(q));
+    allExtraQuestions.forEach(q => questionsContainer.appendChild(q));
 
     questions.forEach(q => q.classList.remove('active'));
     questions[0].classList.add('active');
