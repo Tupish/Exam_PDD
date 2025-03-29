@@ -141,7 +141,7 @@ function startExtraQuestions(){
 
 <!--Проверка доп. вопросов-->
 function checkExtraQuestionsResult(){
-    if (extraQuestionsShown < maxExtraQuestions && extraQuestionsShown < extraQuestions.length) {
+    if(extraQuestionsShown < maxExtraQuestions && extraQuestionsShown < extraQuestions.length) {
         extraQuestions[extraQuestionsShown].classList.add('active');
         extraNumbers[extraQuestionsShown].classList.add('active');
 
