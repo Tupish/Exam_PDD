@@ -1,15 +1,17 @@
 :root{
     --main-color-blue: #219fda;
+    --second-color-blue: #175c85;
 }
 *{
     margin: 0;
     box-sizing: border-box;
 }
 header,footer{
-    background-color: var(--main-color-blue);
+    background: linear-gradient(var(--main-color-blue),var(--second-color-blue));
     padding: 20px;
     text-align: center;
     max-width: 1950px;
+    width: 100%;
 }
 body{
     font-family: Arial, sans-serif;
@@ -19,7 +21,6 @@ body{
 main{
     max-width: 1200px;
     padding: 0 20px;
-    height: 60%;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 40px
@@ -27,6 +28,9 @@ main{
 .logo{
     width: 100px;
     margin-bottom: -25px;
+}
+.mobile-logo{
+    display: none;
 }
 .problem{
     margin-top: 40px;
@@ -37,24 +41,27 @@ h1,h2 {
 header>h1{
     color: white;
 }
-footer>h1{
+.footer-text>h1{
     color: white;
 }
 footer{
+    display: grid;
+    grid-template-columns: 65% 35%;
     margin-top: 20px;
+}
+body>p{
+    text-indent: 20px;
 }
 p>a{
     color: black;
+    text-decoration: none;
 }
 .start-button{
     padding: 10px 20px;
     background: var(--main-color-blue);
     border-radius: 10px;
     border: 1px solid white;
-}
-.start-button>a{
     color: white;
-    text-decoration: none ;
 }
 .start-button:hover{
     background: #004080;
@@ -77,5 +84,40 @@ p>a{
 }
 
 @media (max-width: 700px) {
-
+   h1{
+        font-size: 25px;
+    }
+    header>p{
+        display: none;
+    }
+    header>h1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .logo{
+        display: none;
+    }
+    .mobile-logo{
+        display: block;
+    }
+    main{
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 20px
+    }
+    .problem{
+        margin-bottom: 30px;
+    }
+    .main-images{
+        width: 90%;
+    }
+    iframe{
+        width: 200px;
+        height: 150px;
+    }
+    footer{
+        grid-template-columns: 50% 50%;
+    }
 }

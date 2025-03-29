@@ -93,12 +93,14 @@ body{
 #passExam.active{
     display: flex;
     background-color: #008000;
+    animation: anim 0.5s ease-in;
 }
 #failExam.active{
     display: flex;
     background-color: #ff0000;
+    animation: anim 0.5s ease-in forwards;
 }
-.restart {
+.restart{
     display: block;
     padding: 5px;
     font-size: 19px;
@@ -106,10 +108,10 @@ body{
     border-radius: 5px;
     background-color: var(--main-color-blue);
 }
-.restart:hover {
+.restart:hover{
     background-color: var(--second-color-blue);
 }
-header {
+header{
     width: 100%;
     height: 60px;
     padding-top: 15px;
@@ -132,8 +134,9 @@ hr{
     border-top: 2px solid var(--main-color-grey) ;
 }
 main{
-    height: 490px;
-    margin-top: 20px;
+    height: 540px;
+    max-height: 560px;
+    margin-top: 10px;
 }
 img{
     width: 560px;
@@ -168,4 +171,24 @@ button:hover{
 }
 .extra-question.active{
     display: block;
+}
+@keyframes anim{
+    0%{
+        transform: scale(0);
+        opacity: 0.5;
+}
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 500px){
+    .exam{
+        width: 100%;
+        height: 700px;
+    }
+    button{
+        width: 90%;
+    }
 }
